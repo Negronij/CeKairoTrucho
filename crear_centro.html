@@ -1,18 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crear Centro de Estudiantes</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h2 { text-align: center; color: #333; }
+        .input-group { margin-bottom: 15px; }
+        input[type="text"], textarea { width: 100%; padding: 10px; margin: 5px 0; border-radius: 5px; border: 1px solid #ccc; }
+        button { width: 100%; padding: 10px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+        .file-input { margin-top: 10px; }
+    </style>
 </head>
 <body>
-    <h1>Crear Centro de Estudiantes</h1>
-    <form>
-        <label>Nombre del Centro:</label>
-        <input type="text" required><br>
-        <label>Descripción:</label>
-        <textarea required></textarea><br>
-        <label>Subir Logo:</label>
-        <input type="file" accept="image/*" required><br>
-        <button type="submit">Siguiente</button>
-    </form>
+    <div class="container">
+        <h2>Crear Centro de Estudiantes</h2>
+        <form action="opciones_seguridad.html" method="POST">
+            <div class="input-group">
+                <label for="nombreCentro">Nombre del Centro de Estudiantes:</label>
+                <input type="text" id="nombreCentro" name="nombreCentro" required>
+            </div>
+            <div class="input-group">
+                <label for="descripcionCentro">Descripción del Centro:</label>
+                <textarea id="descripcionCentro" name="descripcionCentro" rows="4" required></textarea>
+            </div>
+            <div class="input-group">
+                <label for="logoCentro">Logo del Centro:</label>
+                <input type="file" id="logoCentro" name="logoCentro" class="file-input" accept="image/*" required>
+            </div>
+            <button type="submit">Siguiente</button>
+        </form>
+    </div>
 </body>
 </html>
+
