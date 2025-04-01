@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitar Miembros</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; }
+        .container { max-width: 600px; margin: 50px auto; padding: 20px; background-color: white; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); }
+        h2 { text-align: center; color: #333; }
+        .codigo { background-color: #e9ecef; padding: 15px; border-radius: 5px; margin-bottom: 15px; }
+        button { background-color: #007bff; color: white; padding: 10px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; }
+        button:hover { background-color: #0056b3; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Invitar Miembros al Centro de Estudiantes</h2>
+        <div class="codigo">
+            <h3>Código para Alumno:</h3>
+            <p id="codigoAlumno">AB12CDE34FGH56JK78LM</p>
+            <button onclick="copyCode('codigoAlumno')">Copiar Código</button>
+        </div>
+        <div class="codigo">
+            <h3>Código para Admin:</h3>
+            <p id="codigoAdmin">XY12ZOP34QRS56TU78VW</p>
+            <button onclick="copyCode('codigoAdmin')">Copiar Código</button>
+        </div>
+    </div>
+    <script>
+        function copyCode(id) {
+            var copyText = document.getElementById(id);
+            navigator.clipboard.writeText(copyText.innerText);
+            alert("Código copiado: " + copyText.innerText);
+        }
+    </script>
+</body>
+</html>
